@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>factorial</title>
+    <link rel="icon" type="image/x-icon" href="./mfavcon.png">
+</head>
+<body>
+    
+<pre><h1>
+Task  ====>
+1) Write a program to print true if the number is unique else print false if it contains duplicates
+
+input: 1211
+output: False
+
+input: 453
+output: True
+
+
+2) Write a program to print the below expression for the given number (Factorial)
+
+input: 5
+
+5*4*3*2*1=120
+
+
+</h1></pre>
+
+<script>
+//task1
+let n = +prompt("enter the number  : ")+"";
+
+d= n.split("").sort()
+count=0
+for (i in d){
+    if(d[i]==d[i+1]){
+        count++
+    }
+}
+console.log("duplicate digits  in number")
+ count>0 ? console.log("true")  :  console.log("false");
+
+//task2
+
+
+let n2  = +prompt("enter the number  :  ")+"";
+res="";
+p=1
+
+for (i=n2;i>0;i--){
+   p=p*i;
+   if(i==1){
+      res = res+i+"="  
+   }else{
+        res = res+i+"*"
+   }
+ 
+}
+
+console.log(p)
+console.log("the factorial is : "+res+p)
+</script>
+
+
+
+
+</body>
+</html>
